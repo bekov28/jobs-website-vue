@@ -38,7 +38,7 @@ const handleSubmit = async () => {
   try {
     const response = await axios.post("/api/jobs/", newJob);
     toast.success("Job added successfully!");
-    router.push(`/jobs/${response.data.id}`);
+    router.push(`/jobs/${response.data.id}`); //redirect
   } catch (error) {
     console.log("Error fetching job", error);
     toast.error('Job was not added')
